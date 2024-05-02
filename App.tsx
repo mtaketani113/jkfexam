@@ -10,6 +10,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import Main from './screens/Main';
 import Exam from './screens/Exam';
+import Answer from './screens/Answer';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +20,7 @@ const App: () => React.JSX.Element = () => {
       <Stack.Navigator initialRouteName="Main">
         <Stack.Screen name="Main" component={Main} />
         <Stack.Screen name="Exam" component={Exam} />
+        <Stack.Screen name="Answer" component={Answer} />
       </Stack.Navigator>
     </NavigationContainer>
   );

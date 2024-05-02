@@ -2,7 +2,7 @@ import React from 'react';
 import {Button, Text} from 'react-native';
 import kumite from '../data/kumite.json';
 
-const Exam = (props: any) => {
+const Answer = (props: any) => {
   /**
    *
    * @param max
@@ -13,26 +13,24 @@ const Exam = (props: any) => {
   };
 
   const id: number = getRandomInt(kumite.length - 1);
+  console.log(id);
+  console.log(kumite);
 
   const question = kumite.filter(s => s.id === id.toString())[0];
+  console.log(question);
 
   return (
     <>
-      <Text>{question.question}</Text>
+      <Text>{question.answer}</Text>
+      <Text>{question.explanation}</Text>
       <Button
-        title="○"
+        title="次へ"
         color="#841584"
-        accessibilityLabel="answer"
-        onPress={() => props.navigation.navigate('Answer')}
+        accessibilityLabel="exam"
+        onPress={() => props.navigation.navigate('Exam')}
       />
       <Button
-        title="×"
-        color="#841584"
-        accessibilityLabel="answer"
-        onPress={() => props.navigation.navigate('Answer')}
-      />
-      <Button
-        title="戻る"
+        title="メインページへ戻る"
         color="#841584"
         accessibilityLabel="main"
         onPress={() => props.navigation.navigate('Main')}
@@ -41,4 +39,4 @@ const Exam = (props: any) => {
   );
 };
 
-export default Exam;
+export default Answer;

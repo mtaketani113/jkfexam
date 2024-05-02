@@ -76,7 +76,7 @@ function Main(props: any): React.JSX.Element {
             <Button
               title="演習開始"
               color="#841584"
-              accessibilityLabel="start exam"
+              accessibilityLabel="start kumite exam"
               onPress={() => props.navigation.navigate('Exam')}
             />
           </Section>
