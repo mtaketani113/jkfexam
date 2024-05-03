@@ -2,31 +2,31 @@
   {
     "id": "1",
     "question": "競技場が高台になっている場合は、更に 1m、合計 3m を四方に確保する必要がある。",
-    "answer": "○",
+    "answer": true,
     "explanation": "安全域は2mだが、高台の場合はさらに1m 合計 3m 必要なので○"
   },
   {
     "id": "2",
     "question": "宗教的なヘッドウェアを任意に着用することができる。",
-    "answer": "×",
+    "answer": false,
     "explanation": "任意となっているが、承認が必要なので×"
   },
   {
     "id": "3",
     "question": "空手着の上着は、太腿の 4 分の 3 以上の長さであること。",
-    "answer": "×",
+    "answer": false,
     "explanation": "4分の3以下なので×"
   },
   {
     "id": "4",
     "question": "空手着のズボンは、少なくとも脛の 3 分の 2 以上の長さでなければならない。",
-    "answer": "○",
+    "answer": true,
     "explanation": "3分の2以上の長さがなければならない。"
   },
   {
     "id": "5",
     "question": "空手着の袖は、手首の長さ以上あってはならない。",
-    "answer": "○",
+    "answer": true,
     "explanation": "袖は手首のより長いと変える必要あり。"
   }
 ]

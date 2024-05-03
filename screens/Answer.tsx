@@ -1,27 +1,18 @@
 import React from 'react';
-import {Button, Text} from 'react-native';
+import {Button, StyleSheet, Text} from 'react-native';
 import kumite from '../data/kumite.json';
+import {useRoute} from '@react-navigation/native';
 
 const Answer = (props: any) => {
-  /**
-   *
-   * @param max
-   * @returns 0からmaxで指定した値のランダムな整数
-   */
-  const getRandomInt = (max: number) => {
-    return Math.floor(Math.random() * max);
-  };
-
-  const id: number = getRandomInt(kumite.length - 1);
-  console.log(id);
-  console.log(kumite);
-
-  const question = kumite.filter(s => s.id === id.toString())[0];
-  console.log(question);
+  const route: any = useRoute();
+  const question = kumite.filter(s => s.id === route.params.id)[0];
 
   return (
     <>
-      <Text>{question.answer}</Text>
+      <Text style={styles.sectionTitle}>
+        {question.answer === route.params.answer ? '正解' : '不正解'}
+      </Text>
+      <Text>{question.answer ? '○' : '×'}</Text>
       <Text>{question.explanation}</Text>
       <Button
         title="次へ"
@@ -38,5 +29,16 @@ const Answer = (props: any) => {
     </>
   );
 };
+
+const styles = StyleSheet.create({
+  sectionContainer: {
+    marginTop: 32,
+    paddingHorizontal: 24,
+  },
+  sectionTitle: {
+    fontSize: 24,
+    fontWeight: '600',
+  },
+});
 
 export default Answer;
