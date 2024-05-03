@@ -58,7 +58,7 @@ const Exam = (props: any) => {
       </Section>
       <View style={buttonStyle}>
         <Button
-          title="戻る"
+          title="メインへ"
           color="#841584"
           accessibilityLabel="main"
           onPress={() => props.navigation.navigate('Main')}
